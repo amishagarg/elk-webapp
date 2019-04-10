@@ -1,0 +1,118 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.js"></script>
+<script src="js/controller.js"></script>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+</head>
+
+	<body style="height: 100%;" ng-app="SSO">
+	  <nav class="navbar border-top border-bottom " style="margin-bottom: 50px">
+        <div class="container-fluid">
+			<div class="navbar-header ">
+				<a href="/"> <img src="/images/logo1.png"
+					style="width: 250px; height: 80px">
+				</a>
+
+			</div>
+		</div>
+    </nav>
+
+	<div class="" style="height: 80%; display: flex; align-items: center" >
+		<div class="container row" style="margin: auto">
+			<div class="col-xs-6 col-sm-6 col-md-6" style="margin: auto">
+
+				<div class="card border login">
+			
+					<div >
+						<div class = "jumbotron " style= "min-height:100px;">  
+							<p class = "display-4">Settings</p>
+							<label for="exampleFormControlFile1">
+                                    <br>
+                                    Click Edit to edit the configuration file.
+                                    <br>
+                                    Click Browse to upload for the configuration file.</label>
+                                           	
+						</div>
+						
+						<div class = "container" style = "margin-bottom:10px">
+							<div class="row">
+							<div class="col-md-6 col-sm-6" style = "margin-bottom:10px; margin-right:10px; margin-left:10px ; margin-top:10px" >
+								<h4> FILE BEAT </h4>
+								<form class="form-group" action="/configFB" method="POST" enctype="multipart/form-data"> 
+									<input type="file" class="form-control-file" name="file"><br>
+									<input type="submit"  class="btn btn-primary form-control"  name="file">									
+								</form>								
+								<form class="form-group" action="/editFB" >
+									<input type="button" value="Edit in editor" class="btn btn-primary form-control" style="margin-bottom : 10px">
+								</form>
+							</div>
+							
+							<div class="col-md-6 col-sm-6" style = "margin-bottom:10px; margin-right:10px; margin-left:10px ; margin-top:10px" >
+								<h4> ELASTIC SEARCH </h4>
+								<form class="form-group" action="/configES" > 
+									<input type="file" class="form-control-file" name="file1">
+								</form>
+								<form class="form-group" action="/editES" >
+									<input type="button" value="Edit in editor" class="btn btn-primary form-control" style="margin-bottom : 10px">
+								</form>
+                            </div>
+                            <div class="col-md-6 col-sm-6"style = "margin-bottom:10px; margin-right:10px; margin-left:10px ; margin-top:10px" >
+								<h4> LOGSTASH </h4>
+								<form class="form-group" action="/configLS" > 
+									<input type="file" class="form-control-file" name="file1">
+								</form>
+								<form class="form-group" action="/editLS" >
+									<input type="button" value="Edit in editor" class="btn btn-primary form-control" style="margin-bottom : 10px">
+								</form>
+                            </div>
+                            <div class="col-md-6 col-sm-6" style = "margin-bottom:10px; margin-right:10px; margin-left:10px ; margin-top:10px" >
+								<h4> KIBANA </h4>
+								<form class="form-group" action="/configKB" > 
+									<input type="file" class="form-control-file" name="file1">
+								</form>
+								<form class="form-group" action="/editKB" >
+									<input type="button" value="Edit in editor" class="btn btn-primary form-control" style="margin-bottom : 10px">
+								</form>
+                            </div>
+                            <div class="col-md-6 col-sm-6" style = "margin-bottom:10px; margin-right:10px; margin-left:10px ; margin-top:10px" >
+								<h4> KAFKA </h4>
+								<form class="form-group" action="/configKF" > 
+									<input type="file" class="form-control-file" name="file1">
+								</form>
+								<form class="form-group" action="/editKF" >
+									<input type="button" value="Edit in editor" class="btn btn-primary form-control" style="margin-bottom : 10px">
+								</form>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-body text-center">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+<html>
+					
