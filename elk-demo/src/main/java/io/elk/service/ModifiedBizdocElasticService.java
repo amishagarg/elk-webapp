@@ -52,7 +52,7 @@ public class ModifiedBizdocElasticService {
 			 * restHighLevelClient = new RestHighLevelClient(RestClient.builder(new
 			 * HttpHost("localhost",9200,"http"), (new HttpHost("localhost",9201,"http"))));
 			 */
-			System.out.println("hi folks");
+			System.out.println("Alright, alright, alright.");
 			IndexResponse indexResponse = restHighLevelClient.index(indexRequest);
 			System.out.println(indexResponse.getIndex()+" "+indexResponse.getType());
 			System.out.println("Successfully sent the concerned bizdoc");

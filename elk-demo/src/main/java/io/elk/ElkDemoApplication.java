@@ -3,6 +3,8 @@ package io.elk;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import io.elk.batch.PushingElasticBatch;
@@ -17,8 +19,10 @@ public class ElkDemoApplication {
 	private static ModifiedBizdocElasticService modifiedBizdocElasticService ;
 	
 	public static void main(String[] args) {
-		SpringApplication.run(ElkDemoApplication.class, args);
-		
+		//SpringApplication.run(ElkDemoApplication.class, args);
+		SpringApplicationBuilder builder = new SpringApplicationBuilder(ElkDemoApplication.class);
+		builder.headless(false);
+	    ConfigurableApplicationContext context = builder.run(args);
 		/*
 		 * PushingElasticBatch peb = new PushingElasticBatch(); peb.schedulerForDb();
 		 */
