@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<elastic.version>6.3.0</elastic.version>
+		<elastic.version>6.8.15</elastic.version>
 	</properties>
 
 	<dependencies>
